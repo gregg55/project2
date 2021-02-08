@@ -15,19 +15,19 @@ const suits = [
         year: '1967',
     },
     {
-        name:'Babe Ruth',
-        team: 'yankees',
-        year: '1965',
-    },
-    {
-        name:'Willie Mays',
-        team: 'giants',
-        year: '1967',
-    },
-    {
-        name:'Barry Bonds',
-        team: 'Giants',
+        name:'Bob Gibson',
+        team: 'cardinals',
         year: '1968',
+    },
+    {
+        name:'Tom Seaver',
+        team: 'mets',
+        year: '1969',
+    },
+    {
+        name:'Ricky Henderson',
+        team: 'Athletics',
+        year: '1970',
     }
 ];
 
