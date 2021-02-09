@@ -21,7 +21,7 @@ const suits = [
     },
     {
         name:'Tom Seaver',
-        team: 'mets',
+        team: 'Mets',
         year: '1969',
     },
     {
