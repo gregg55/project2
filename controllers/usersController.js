@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const User = require('../models').User;
-const Fruit = require('../models').Suit;
+const Suit = require('../models').Suit;
 
 // INDEX
 router.get("/", (req, res) => {

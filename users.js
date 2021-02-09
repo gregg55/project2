@@ -14,7 +14,7 @@ const users = [
         username: 'Cole1',
         password: 'suit3',
     }
-]
+];
 
 // only thing we will export is users
 module.exports = users;

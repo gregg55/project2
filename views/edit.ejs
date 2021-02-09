@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/css/app.css" />
+  </head>
+
+  <body>
+    <h1>Edit Suit Page</h1>
+    <!--  ADD action attribute to form tag-->
+    <form action="/suits/<%= suit.id %>?_method=PUT" method="POST">
+      Name: <input type="text" name="name" value="<%=suit.name%>" /><br />
+      Team: <input type="text" name="team" value="<%=suit.team%>" /><br />
+      Year: <input type="text" name="year" value="<%=suit.year%>" /><br />
+     
+      <br>
+      <input type="submit" name="" value="Submit Changes" />
+    </form>
+  </body>
+</html>
