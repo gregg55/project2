@@ -36,15 +36,35 @@ router.post("/", (req, res) => {
   });
 });
 
-
-// SHOW Route - suit
+// SHOW ROUTE - updated for USER ID PK and FK - Suit
 router.get("/:id", (req, res) => {
-  Suit.findByPk(req.params.id).then((suit) => {
-    res.render("show.ejs", {
-      suit: suit,
-    });
-  });
-});
+  Fruit.findByPk(req.params.id, {
+      include : [{
+          model: User,
+          attributes: ['name']
+      }],
+      attributes: ['name', 'team', 'year']
+  })
+  .then(suit => {
+      console.log(suit)
+      res.render('show.ejs', {
+          suit: suit
+      });
+  })
+})
+
+
+
+
+
+// SHOW Route - suit - PRIOR to USERID FK PK
+//router.get("/:id", (req, res) => {
+  //Suit.findByPk(req.params.id).then((suit) => {
+    //res.render("show.ejs", {
+      //suit: suit,
+    //});
+  //});
+//});
 
 // EDIT ROUTE - suit
 router.get("/:id/edit", function (req, res) {

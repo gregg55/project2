@@ -50,7 +50,7 @@ router.get("/profile/:id", (req, res) => {
   User.findByPk(req.params.id, {
     include: [
       {
-        model: Fruit,
+        model: Suit,
         attributes: ['id', 'name']
       }
     ]
