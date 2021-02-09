@@ -11,6 +11,7 @@ module.exports = {
           year: '1965',
           createdAt: new Date(),
           updatedAt: new Date(),
+          userId: 1,
         
         },
         {
@@ -19,6 +20,7 @@ module.exports = {
           year: '1966',
           createdAt: new Date(),
           updatedAt: new Date(),
+          userId: 2,
          
           
         },
@@ -28,7 +30,8 @@ module.exports = {
           year: '1967',
           createdAt: new Date(),
           updatedAt: new Date(),
-         
+          userId: 3,
+
         },
         {
           name:'Bob Gibson',
@@ -36,6 +39,7 @@ module.exports = {
           year: '1968',
           createdAt: new Date(),
           updatedAt: new Date(),
+          userId: 4,
          
         },
         {
@@ -44,8 +48,8 @@ module.exports = {
           year: '1969',
           createdAt: new Date(),
           updatedAt: new Date(),
-        
-          
+          userId: 5,
+         
         },
         {
           name:'Ricky Henderson',
@@ -53,6 +57,7 @@ module.exports = {
           year: '1970',
           createdAt: new Date(),
           updatedAt: new Date(),
+          userId: 6,
        
         },
       ],

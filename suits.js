@@ -2,32 +2,38 @@ const suits = [
     {
         name:'Babe Ruth',
         team: 'yankees',
-        year: '1965'
+        year: '1965',
+      
     },
     {
         name:'Hank Aaron',
         team: 'braves',
-        year: '1966'
+        year: '1966',
+        
     },
     {
         name:'Mickey Mantle',
         team: 'yankees',
         year: '1967',
+        userId: 3,
     },
     {
         name:'Bob Gibson',
         team: 'cardinals',
         year: '1968',
+       
     },
     {
         name:'Tom Seaver',
         team: 'Mets',
         year: '1969',
+        
     },
     {
         name:'Ricky Henderson',
         team: 'Athletics',
         year: '1970',
+        
     }
 ];
 

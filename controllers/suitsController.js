@@ -2,11 +2,11 @@ const express = require("express");
 const router = express.Router();
 
 // const fruits = require("../fruits.js");
-const Fruit = require('../models').Suit
+const Suit = require('../models').Suit
 const User = require('../models').User;
 //const Season = require("../models").Season;
 
-//Sequelize GET route
+//Sequelize GET route - INDEX ROUTE - suit
 router.get("/", (req, res) => {
   Suit.findAll().then((suits) => {
     res.render("index.ejs", {
@@ -20,6 +20,8 @@ router.get("/new", (req, res) => {
   res.render("new.ejs");
 });
 
+
+// VALIDATE BELOW 
 router.post("/", (req, res) => {
   if (req.body.readyToEat === "on") {
     //if checked, req.body.readyToEat is set to 'on'
@@ -34,32 +36,28 @@ router.post("/", (req, res) => {
   });
 });
 
-// show
+
+// SHOW Route - suit
 router.get("/:id", (req, res) => {
-  Fruit.findByPk(req.params.id, {
-    include: [{
-      model: User,
-      attributes: ['name']
-    },
-    {
-      model: Season
-    }
-  ],
-    attributes: ['name', 'team', 'year']
-  }).then((fruit) => {
-    console.log(fruit);
-    res.render('show.ejs', { fruit: fruit });
+  Suit.findByPk(req.params.id).then((suit) => {
+    res.render("show.ejs", {
+      suit: suit,
+    });
   });
 });
 
+// EDIT ROUTE - suit
 router.get("/:id/edit", function (req, res) {
-  Fruit.findByPk(req.params.id).then((fruit) => {
-    Season.findAll().then(allSeasons => {
-      res.render('edit.ejs', { fruit, seasons: allSeasons });
-    })
-   });
+  Suit.findByPk(req.params.id).then((suit) => {
+    res.render("edit.ejs", {
+      suit: suit,
+    });
+  });
 });
 
+
+
+// VALIDATE BELOW
 router.put("/:id", (req, res) => {
   //:index is the index of our fruits array that we want to change
   req.body.readyToEat = (req.body.readyToEat === "on" ? true : false);
@@ -77,8 +75,9 @@ router.put("/:id", (req, res) => {
   });
 });
 
+// DELETE ROUTE - Suits
 router.delete("/:id", (req, res) => {
-  Fruit.destroy({ where: { id: req.params.id }}).then(() => {
+  Suit.destroy({ where: { id: req.params.id }}).then(() => {
     res.redirect('/suits')
   });
 });
