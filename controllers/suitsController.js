@@ -21,15 +21,15 @@ router.get("/new", (req, res) => {
 });
 
 
-// VALIDATE BELOW 
+// POST ROUTE VALIDATE BELOW --- ***
 router.post("/", (req, res) => {
-  if (req.body.readyToEat === "on") {
+  //if (req.body.readyToEat === "on") {
     //if checked, req.body.readyToEat is set to 'on'
-    req.body.readyToEat = true; //do some data correction
-  } else {
+    //req.body.readyToEat = true; //do some data correction
+  //} else {
     //if not checked, req.body.readyToEat is undefined
-    req.body.readyToEat = false; //do some data correction
-  }
+    //req.body.readyToEat = false; //do some data correction
+  //}
 
   Suit.create(req.body).then((newSuit) => {
     res.redirect("/suits");
@@ -55,8 +55,6 @@ router.get("/:id", (req, res) => {
 
 
 
-
-
 // SHOW Route - suit - PRIOR to USERID FK PK
 //router.get("/:id", (req, res) => {
   //Suit.findByPk(req.params.id).then((suit) => {
@@ -77,21 +75,22 @@ router.get("/:id/edit", function (req, res) {
 
 
 
-// VALIDATE BELOW
+// PUT ROUTE - VALIDATE BELOW *** 
 router.put("/:id", (req, res) => {
-  //:index is the index of our fruits array that we want to change
-  req.body.readyToEat = (req.body.readyToEat === "on" ? true : false);
 
-  Fruit.update(req.body, {
+  //:index is the index of our fruits array that we want to change
+  //req.body.readyToEat = (req.body.readyToEat === "on" ? true : false);
+
+  Suit.update(req.body, {
     where: { id: req.params.id },
     returning: true
-  }).then((fruit) => {
-    Season.findByPk(req.body.season).then(foundSeason => {
-      Fruit.findByPk(req.params.id).then(foundFruit => {
-        foundFruit.addSeason(foundSeason);
+  }).then((suit) => {
+    //Season.findByPk(req.body.season).then(foundSeason => {
+      Suit.findByPk(req.params.id).then(foundSuit => {
+        //foundFruit.addSeason(foundSeason);
         res.redirect("/suits");
       });
-    });
+    //});
   });
 });
 
