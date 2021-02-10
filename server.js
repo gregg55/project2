@@ -12,18 +12,23 @@ app.use(methodOverride("_method"));
 //near the top, around other app.use() calls
 app.use(express.urlencoded({ extended: true }));
 
-app.use((req, res, next) => {
-  let logStatement = `${req.method} ${req.url}`;
-  if(Object.keys(req.body).length > 0) {
-    logStatement += ` -- body: ${JSON.stringify(req.body)}`;
-  }
-  console.log(logStatement);
-  next();
-});
+//app.use((req, res, next) => {
+ // let logStatement = `${req.method} ${req.url}`;
+  //if(Object.keys(req.body).length > 0) {
+   // logStatement += ` -- body: ${JSON.stringify(req.body)}`;
+ // }
+  //console.log(logStatement);
+  //next();
+//});
 
 app.use("/suits", require("./controllers/suitsController.js"));
 app.use("/users", require("./controllers/usersController.js"));
 
+// ADDED THIS below
+app.get('/',(req,res) => {
+res.redirect('/suits')
+
+})
 app.listen(3000, () => {
   console.log("I am listening");
 });

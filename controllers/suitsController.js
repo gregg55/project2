@@ -23,22 +23,16 @@ router.get("/new", (req, res) => {
 
 // POST ROUTE VALIDATE BELOW --- ***
 router.post("/", (req, res) => {
-  //if (req.body.readyToEat === "on") {
-    //if checked, req.body.readyToEat is set to 'on'
-    //req.body.readyToEat = true; //do some data correction
-  //} else {
-    //if not checked, req.body.readyToEat is undefined
-    //req.body.readyToEat = false; //do some data correction
-  //}
-
   Suit.create(req.body).then((newSuit) => {
+    console.log(req.body);
     res.redirect("/suits");
+    
   });
 });
 
 // SHOW ROUTE - updated for USER ID PK and FK - Suit
 router.get("/:id", (req, res) => {
-  Fruit.findByPk(req.params.id, {
+  Suit.findByPk(req.params.id, {
       include : [{
           model: User,
           attributes: ['name']
