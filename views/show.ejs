@@ -3,20 +3,35 @@
   <head>
     <meta charset="utf-8" />
     <title></title>
+    <link rel="stylesheet" href="/css/app.css" />
   </head>
 
   <body>
     <h1>Show - Baseball Card Collection History of Player Added</h1>
-    The Player is <%= suit.name %> and he played for the <%= suit.team %> in <%= suit.year %>
+    <nav>
+    The Player is<ins> <%= suit.name %> </ins> and he played for the<ins>  <%= suit.team %> </ins> in <ins> <%= suit.year %></ins> 
    <br>
     <br>
-    The Baseball Card is owned by <%= suit.User.name %>
+    The Baseball Card is owned by <ins><%= suit.User.name %></ins>
     <br>
     <br>
-    
-    <h1>Show - Do You Still Own the Baseball Card in your collection?</h1>
-    <form action="/suits/<%= suit.id %>?_method=DELETE" method="POST">
-      <input type="submit" value="DELETE <%= suit.name %>" />
-    </form>
+  </nav>
+    <!-- <h1>Show - Do You Still Own the Baseball Card in your collection?</h1> -->
+   
+
+      <!-- <form action="/suits/<%= suit.id; %>?_method=DELETE" method="POST"> -->
+        <!-- <input type="submit" value="DELETE" /> -->
+    <nav>
+      </form>
+    <h1>Would you like to add another Baseball Card to your Collection? </h1>
+    <a href="/users/login"> Log In</a>
+    <br>
+    <br>
+    <h1>Babe Ruth Card (est. Worth $ 3000) </h1>
+    <img src="/images/baberuth.jpg" alt="Babe" width="250" height ="250"/>
+  </nav>
    </body>
+   <footer>
+    <h4> Footer Location: show.ejs </h4>
+  </footer>
 </html>

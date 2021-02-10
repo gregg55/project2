@@ -10,10 +10,12 @@
     <h1>Index - Baseball Card Collection</h1>
 
     <nav>
-      <a href="/suits/new">Add a New Card to your  Baseball Card Collection</a>
+      <h2>Do you want to add  New Card to your Baseball Collection </h2>
+      <a href="/suits/new"> Click Here New Card</a>
     </nav>
 
     <nav>
+      <img src="/images/baberuth.jpg" alt="Babe" width="250" height ="250" align ="right"/>
       <ul>
         <% for(let i=0; i<suits.length; i++) { %>
         <li>
@@ -24,6 +26,7 @@
           </form>
           <!-- Add edit link here  -->
           <a href="/suits/<%= suits[i].id; %>/edit">Edit</a>
+          
         </li>
         <% } %>
       </ul>

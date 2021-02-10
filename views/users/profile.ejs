@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/app.css" />
   </head>
 
   <body>
@@ -17,14 +18,18 @@
       Password:
       <input type="text" name="password" value="<%=user.password%>" /><br />
       <br />
-      <input type="submit" value="Edit Profile" />
+
+      <h2>Do you need to EDIT your CURRENT PROFILE? </h2>
+      <input type="submit" value="Edit User Profile" />
     </form>
     <br />
     <form action="/users/<%= user.id %>?_method=DELETE" method="POST">
-      <input type="submit" value="Delete User" />
+      <h2>Do you need to DELETE your CURRENT PROFILE? </h2>
+      <input type="submit" value="Delete User Profile" />
     </form>
   </nav>
-    <h3>Profile - Listed below is your current Baseball Card Collection:</h3>
+  <nav>
+    <h2> Listed below is your current Baseball Card Collection Listing:</h2>
     <ul>
       <% for (let i = 0; i < user.Suits.length; i++) { %>
         <li>
@@ -34,8 +39,10 @@
         <% } %>
     </ul>
     <br /><br />
+    <h2> Would You Like to Add a Baseball Card to your Listing? </h2>
     <a href="/suits">View All Suits</a>
-  </body>
+  </nav>
+  
   <nav>
     <h1>Babe Ruth Card (est. Worth $ 3000) </h1>
     <img src="/images/baberuth.jpg" alt="Babe" width="100" height ="100"/>
