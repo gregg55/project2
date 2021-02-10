@@ -6,12 +6,15 @@
   </head>
 
   <body>
-    <h1>Show - Baseball Card Collection</h1>
-    The Player is <%= suit.name %> and he plays for the <%= suit.team %> in <%= suit.year %>
-   
-    It is added by <%= suit.User.name %>
-
+    <h1>Show - Baseball Card Collection History of Player Added</h1>
+    The Player is <%= suit.name %> and he played for the <%= suit.team %> in <%= suit.year %>
+   <br>
     <br>
+    The Baseball Card is owned by <%= suit.User.name %>
+    <br>
+    <br>
+    
+    <h1>Show - Do You Still Own the Baseball Card in your collection?</h1>
     <form action="/suits/<%= suit.id %>?_method=DELETE" method="POST">
       <input type="submit" value="DELETE <%= suit.name %>" />
     </form>
