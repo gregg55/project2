@@ -30,7 +30,8 @@ router.post("/login", (req, res) => {
     if (users.length > 0) {
       console.log('username/password combo is correct');
       let user = users[0];
-      res.redirect(`/users/profile/${user.id}`);
+      //res.redirect(`/users/profile/${user.id}`);
+       res.redirect(`/suits`);
     } else {
       console.log('username/password combo is not correct');
       res.redirect('/users');

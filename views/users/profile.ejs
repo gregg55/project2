@@ -5,7 +5,7 @@
   </head>
 
   <body>
-    <h1>Welcome <%=user.name%></h1>
+    <h1>Profile -Welcome to Baseball Card Collection  <%=user.name%></h1>
     <form action="/users/profile/<%= user.id %>?_method=PUT" method="POST">
       Name: <input type="text" name="name" value="<%=user.name%>" /><br />
       <br />
@@ -23,7 +23,7 @@
       <input type="submit" value="Delete User" />
     </form>
 
-    <h3>Profile - Baseball Cards added by you:</h3>
+    <h3>Profile - Listed below is your current Baseball Card Collection:</h3>
     <ul>
       <% for (let i = 0; i < user.Suits.length; i++) { %>
         <li>
