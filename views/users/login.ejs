@@ -7,14 +7,29 @@
   </head>
 
   <body>
-    <h1>Login - Welcome to Baseball Card Collection </h1>
+    <h1> Welcome to Baseball Card Collection </h1>
+    <br>
+    <nav>
+    <h3> Please enter your correct Username and Password Below</h3>
 
     <form action="/users/login" method="POST">
       Username: <input type="text" name="username" /> <br />
       <br />
       Password: <input type="text" name="password" /><br />
       <br />
+      <br />
+      <h3> To view your personal Baseball Card Collection</h3>
       <input type="submit" value="Login" />
+      <br />
+      <h3> If entered incorrectly, please re-enter your username and password! </h3>
+    </nav>
     </form>
+    <nav>
+    <h1>Babe Ruth Card (est. Worth $ 3000) </h1>
+    <img src="/images/baberuth.jpg" alt="Babe" width="250" height ="250"/>
+  </nav>
   </body>
+  <footer>
+    <h4> Footer Location:  views > users > login.ejs </h4>
+  </footer>
 </html>

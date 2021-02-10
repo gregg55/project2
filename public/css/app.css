@@ -1,4 +1,9 @@
 
+h1 {
+  text-align: center;
+  color: orange;
+}
+
 body {
     
     color: red;
@@ -10,5 +15,31 @@ body {
     margin: 2rem;
     padding: 1rem;
     outline-offset: 0.5rem;
-    
+
   }
+  nav {
+    
+    color: red;
+    border: 0.5rem outset pink;
+    
+    box-shadow: 0 0 0 2rem skyblue;
+    border-radius: 12px;
+    font: bold 1rem sans-serif;
+    margin: 2rem;
+    padding: 1rem;
+    outline-offset: 0.5rem;
+
+  }
+
+  img {
+    width: 100;
+    height: 100;
+   text-align: right;
+  }
+
+  footer {
+    border: 0.5rem outset pink;
+    color: black;
+    text-align: center;
+  }
+

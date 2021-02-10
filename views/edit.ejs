@@ -7,7 +7,8 @@
   </head>
 
   <body>
-    <h1>Edit Baseball Card Collection</h1>
+    <h1> Baseball Card Collection</h1>
+    <nav>
     <!--  ADD action attribute to form tag-->
     <form action="/suits/<%= suit.id %>?_method=PUT" method="POST">
       Name: <input type="text" name="name" value="<%=suit.name%>" /><br />
@@ -17,5 +18,14 @@
       <br>
       <input type="submit" name="" value="Submit Changes" />
     </form>
+  </nav>
+    <nav>
+      <h1>Babe Ruth Card (est. Worth $ 3000) </h1>
+      <img src="/images/baberuth.jpg" alt="Babe" width="250" height ="250"/>
+    </nav>
+    </body>
+    <footer>
+      <h4> Footer Location:  views > users > edit.ejs </h4>
+    </footer>
   </body>
 </html>
