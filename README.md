@@ -42,3 +42,5 @@ Wireframe - Set up Process
 
 Test to Heroku 
 1) log into Heroku 
+2) Link to Baseball Card Collection Site:  https://greggproject2.herokuapp.com/suits
+3) Link to User/Sign Up Page: https://greggproject2.herokuapp.com/users
