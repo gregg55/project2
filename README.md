@@ -39,6 +39,7 @@ Wireframe - Set up Process
 
 1) Table: Cards - name,team, year , userID (FK) 
 2) Table: User - name, username, password, userId (PK)
+3) Migration -  Added UserID to Suits  (linked foreign Key to Primary Key)
 
 Test to Heroku 
 1) log into Heroku 
