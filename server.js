@@ -1,4 +1,5 @@
 
+require('dotenv').config();
 const express = require("express");
 const app = express(); //app is an object
 const methodOverride = require("method-override");
@@ -29,7 +30,9 @@ app.get('/',(req,res) => {
 res.redirect('/suits')
 
 })
-app.listen(3000, () => {
+
+app.listen(process.env.PORT, () => {
+//app.listen(3000, () => {
   console.log("I am listening");
 });
 
