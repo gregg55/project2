@@ -1,10 +1,20 @@
 
+Welcome
+
+Welcome to the Baseball Card Collection Website. This is a Website that contains the Baseball Cards that you have in your collection
+
+You may edit your collection at any time
+
+![informed optimism?] {images/baberuth.jpg}
+
+Installation
+
 To get started, navigate to the root directory
 
-    Install the NPM packages npm install
-    Make sure to update the config/config.json file with your database information
-    Setup the database clean and seed it with data npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all
-    Start the app nodemon
+    1) Install the NPM packages npm install
+    2)  Make sure to update the config/config.json file with your database information
+    3) Setup the database clean and seed it with data npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all
+    4) Start the app nodemon
 
 
 User Stories
@@ -45,3 +55,14 @@ Test to Heroku
 1) log into Heroku 
 2) Link to Baseball Card Collection Site:  https://greggproject2.herokuapp.com/suits
 3) Link to User/Sign Up Page: https://greggproject2.herokuapp.com/users
+
+
+Technologies Used
+
+1) Javascript ES6, HTML5 
+2) REST, CRUD
+3) sequelize associations
+
+Next Steps
+
+1) I would like to add the $ amount for each baseball card and an overall total of what your Baseball Collection is worth. 
