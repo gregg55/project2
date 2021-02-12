@@ -1,5 +1,5 @@
 
-Welcome
+# Welcome
 
 Welcome to the Baseball Card Collection Website. This is a Website that contains the Baseball Cards that you have in your collection
 
@@ -7,7 +7,7 @@ You may edit your collection at any time
 
 ![informed optimism?](public/images/baberuth.jpg)
 
-Installation
+# Installation
 
 To get started, navigate to the root directory
 
@@ -17,7 +17,7 @@ To get started, navigate to the root directory
     4) Start the app nodemon
 
 
-User Stories
+# User Stories
 
 User / Sign Up Screen 
 1)	Sign in:  You will need to Sign into the Card Collector Site, if you are a current member 
@@ -25,44 +25,44 @@ User / Sign Up Screen
 3)  EDIT Profile:  If you need to edit your existing profile (username or Password), you may change this information and then your profile will be updated with your changes
 4) DELETE Profile:  if you no longer need a Profile, then you may delete your profile (username, and password)
 
-Baseball Card Collector Site
+# Baseball Card Collector Site
 5)	Create: Select a Baseball card Player that you want for your Card Collector Site and then type the following
     a)  Create: Input the Baseball player name of the card that you have 
     b)  Create: Input the Team that the Baseball player plays
     b)  Create: Input the Year of the Card for the player that you want
 6) Create: Input your current User ID  
 
-pgAdmin Site 
+ # pgAdmin Site 
 7) Read: Cards will be placed in pgAdmin
     a) Suits table will store the Baseball Players
     b) Users Table will store the Users 
 
-Baseball Card Collector Site  - Update or Edits
+# Baseball Card Collector Site  - Update or Edits
 8)	Update:  if you want to add Cards to your Card Collector Site
 9)  EDIT:  if you want to edit the Baseball Card such as changing the Players name or team or year
 
-Baseball Card Collector Site  - Delete 
+# Baseball Card Collector Site  - Delete 
 10)	Delete: if you want to Delete Cards from your Card Collector Site
 11) Select DELETE button and the player will remove from your Card Collection 
 
-Wireframe - Set up Process 
+# Wireframe - Set up Process 
 
 1) Table: Cards - name,team, year , userID (FK) 
 2) Table: User - name, username, password, userId (PK)
 3) Migration -  Added UserID to Suits  (linked foreign Key to Primary Key)
 
-Test to Heroku 
+# Test to Heroku 
 1) log into Heroku 
 2) Link to Baseball Card Collection Site:  https://greggproject2.herokuapp.com/suits
 3) Link to User/Sign Up Page: https://greggproject2.herokuapp.com/users
 
 
-Technologies Used
+# Technologies Used
 
 1) Javascript ES6, HTML5 
 2) REST, CRUD
 3) sequelize associations
 
-Next Steps
+# Next Steps
 
 1) I would like to add the $ amount for each baseball card and an overall total of what your Baseball Collection is worth. 
