@@ -5,7 +5,7 @@ Welcome to the Baseball Card Collection Website. This is a Website that contains
 
 You may edit your collection at any time
 
-![informed optimism?] {images/baberuth.jpg}
+![informed optimism?](images/baberuth.jpg)
 
 Installation
 
